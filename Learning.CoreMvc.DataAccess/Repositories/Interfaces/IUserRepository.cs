@@ -6,7 +6,8 @@ using System.Text;
 
 namespace Learning.CoreMvc.DataAccess.Repositories.Interfaces
 {
-    public interface IUserRepository : ICrudRepository<User, Guid, ApplicationDbContext>
+    public interface IUserRepository : ICrudRepository<User, Guid>
     {
+        IEnumerable<User> GetAllUsers();
     }
 }

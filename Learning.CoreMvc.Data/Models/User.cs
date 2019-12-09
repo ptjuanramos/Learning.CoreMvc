@@ -6,6 +6,7 @@ using Learning.CoreMvc.Data.Models.Interfaces;
 
 namespace Learning.CoreMvc.Data.Models
 {
+    [Table("Users")]
     public class User : IGuidBasedEntity
     {
         public Guid Id { get; set; }

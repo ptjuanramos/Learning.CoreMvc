@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Learning.CoreMvc.Business;
+using Learning.CoreMvc.DataAccess.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Learning.CoreMvc.Controllers
@@ -11,13 +12,19 @@ namespace Learning.CoreMvc.Controllers
     {
         private readonly UserManager userManager;
 
-        public UserController()
+        public UserController(UserManager userManager)
         {
-
+            this.userManager = userManager;
         }
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Users()
+        {
+            ViewBag.Users = userManager.GetAllUsers();
             return View();
         }
     }

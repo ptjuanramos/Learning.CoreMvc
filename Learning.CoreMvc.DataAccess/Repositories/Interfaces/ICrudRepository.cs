@@ -10,9 +10,8 @@ namespace Learning.CoreMvc.DataAccess.Repositories.Interfaces
     /// <typeparam name="T"></typeparam>
     /// <typeparam name="TKey"></typeparam>
     /// <typeparam name="TContext"></typeparam>
-    public interface ICrudRepository<T, TKey, TContext>
+    public interface ICrudRepository<T, TKey>
         where T: IBaseEntity<TKey>
-        where TContext : DbContext
     {
 
         Task<T> CreateAsync(T objectToCreate);

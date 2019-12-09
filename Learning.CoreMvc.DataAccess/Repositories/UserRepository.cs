@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Learning.CoreMvc.DataAccess.Repositories
 {
-    public class UserRepository : ICrudRepository<User, Guid, ApplicationDbContext>
+    public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext applicationDbContext;
 
-        public UserRepository(ApplicationDbContext applicationDbContext)
-        { 
-            this.applicationDbContext = applicationDbContext;
+        public UserRepository()
+        {
+            this.applicationDbContext = Activator.CreateInstance<ApplicationDbContext>();
         }
 
         public async Task<User> CreateAsync(User objectToCreate)

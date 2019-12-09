@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Learning.CoreMvc.Business\Learning.CoreMvc.Business.csproj" />
     <ProjectReference Include="..\Learning.CoreMvc.Data\Learning.CoreMvc.Data.csproj" />
   </ItemGroup>
 
