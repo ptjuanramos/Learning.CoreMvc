@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Learning.CoreMvc.Models;
+using Learning.CoreMvc.ViewModels;
 
 namespace Learning.CoreMvc.Controllers
 {

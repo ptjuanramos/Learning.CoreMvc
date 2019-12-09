@@ -19,18 +19,6 @@ namespace Learning.CoreMvc.Data.Context
 
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-
-            IConfiguration configuration = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json")
-                    .AddJsonFile("appsettings.Development.json", true)
-                    .Build();
-
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("ApplicationContext"));
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

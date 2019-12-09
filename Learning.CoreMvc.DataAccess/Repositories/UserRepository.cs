@@ -1,6 +1,8 @@
 ﻿using Learning.CoreMvc.Data.Context;
 using Learning.CoreMvc.Data.Models;
 using Learning.CoreMvc.DataAccess.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,9 @@ namespace Learning.CoreMvc.DataAccess.Repositories
     {
         private readonly ApplicationDbContext applicationDbContext;
 
-        public UserRepository()
+        public UserRepository(IServiceProvider serviceProvider)
         {
-            this.applicationDbContext = Activator.CreateInstance<ApplicationDbContext>();
+            this.applicationDbContext = serviceProvider.GetRequiredService<ApplicationDbContext>();
         }
 
         public async Task<User> CreateAsync(User objectToCreate)

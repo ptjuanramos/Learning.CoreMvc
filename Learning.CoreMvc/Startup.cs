@@ -29,6 +29,17 @@ namespace Learning.CoreMvc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>((options) =>
+            {
+                IConfiguration configuration = new ConfigurationBuilder()
+                                    .SetBasePath(Directory.GetCurrentDirectory())
+                                    .AddJsonFile("appsettings.json")
+                                    .AddJsonFile("appsettings.Development.json", true)
+                                    .Build();
+
+                options.UseSqlServer(configuration.GetConnectionString("ApplicationContext"));
+            });
+
             services.AddControllersWithViews();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<UserManager>();
