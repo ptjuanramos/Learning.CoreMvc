@@ -13,6 +13,6 @@ namespace Learning.CoreMvc.Data.Context
 
         }
 
-        public DbSet<User> UserDbSet { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }
