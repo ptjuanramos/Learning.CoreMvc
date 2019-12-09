@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CoreMvc", "Learning.CoreMvc\Learning.CoreMvc.csproj", "{17B9F23D-B902-4ED8-9572-B7DFAA04D84E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Learning.CoreMvc", "Learning.CoreMvc\Learning.CoreMvc.csproj", "{17B9F23D-B902-4ED8-9572-B7DFAA04D84E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CoreMvc.Data", "Learning.CoreMvc.Data\Learning.CoreMvc.Data.csproj", "{2701611D-6338-4D07-A34E-DD447DFAD646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Learning.CoreMvc.Data", "Learning.CoreMvc.Data\Learning.CoreMvc.Data.csproj", "{2701611D-6338-4D07-A34E-DD447DFAD646}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Learning.CoreMvc.Business", "Learning.CoreMvc.Business\Learning.CoreMvc.Business.csproj", "{71E60A90-AFC7-4675-B2DD-51A0B5A6D48F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CoreMvc.DataAccess", "Learning.CoreMvc.DataAccess\Learning.CoreMvc.DataAccess.csproj", "{A64A32F5-707B-43B2-BE9B-A4F8BCA0B2E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2701611D-6338-4D07-A34E-DD447DFAD646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2701611D-6338-4D07-A34E-DD447DFAD646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2701611D-6338-4D07-A34E-DD447DFAD646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E60A90-AFC7-4675-B2DD-51A0B5A6D48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E60A90-AFC7-4675-B2DD-51A0B5A6D48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E60A90-AFC7-4675-B2DD-51A0B5A6D48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E60A90-AFC7-4675-B2DD-51A0B5A6D48F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64A32F5-707B-43B2-BE9B-A4F8BCA0B2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64A32F5-707B-43B2-BE9B-A4F8BCA0B2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64A32F5-707B-43B2-BE9B-A4F8BCA0B2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64A32F5-707B-43B2-BE9B-A4F8BCA0B2E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
